@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+button
+{
+  transition: all 0.2 ease;
+}
+button:active
+{
+  transform: scale(0.95);
+}
