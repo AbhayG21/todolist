@@ -22,11 +22,15 @@ const page = () => {
     if (mainTask.length > 0) {
         renderTask = mainTask.map((t, i) => {
             return (
-                <li>
-                    <div className="flex justify-between mb-5">
+                <li key={i } className="flex items-center justify-between mb-5">
+                    <div className="flex w-2/3 items-center justify-between">
                         <h5 className="text-2xl font-semibold">{t.title}</h5>
                         <h6 className="text-xl font-semibold">{t.desc}</h6>
+                        <br />
                     </div>
+                    <button className="bg-red-400 text-white px-4 py-2 rounded font-bold">
+                        Delete
+                    </button>
                 </li>
             );
         });
