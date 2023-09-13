@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
 button
 {
   transition: all 0.2 ease;
@@ -9,4 +13,18 @@ button
 button:active
 {
   transform: scale(0.95);
+}
+/* set image as background of h1 tag */
+h1
+{
+  font-weight: 900;
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+  background-image: url("pexels-alexander-grey-4048389.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+
 }

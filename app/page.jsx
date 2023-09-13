@@ -23,38 +23,37 @@ const page = () => {
        copyTask.splice(i,1)
         setmainTask(copyTask)
     };
-    let renderTask = <h1 className="font-bold">No Task Available</h1>;
+    let renderTask = <h2 className="font-bold">No Task Available</h2>;
     if (mainTask.length > 0) {
         renderTask = mainTask.map((t, i) => {
             return (
                 <li key={i} className="flex items-center justify-between mb-5">
-                    <div className="flex w-2/3 items-center justify-between">
-                        <h5 className="text-2xl font-semibold">{t.title}</h5>
-                        <h6 className="text-lg font-medium">{t.desc}</h6>
+                    <div className="flex w-3/4 items-center justify-between ">
+                        <h5 className="text-2xl font-semibold w-1/2 px-2">
+                            {t.title}
+                        </h5>
+                        <h6 className="text-lg font-medium w-1/2 px-2">{t.desc}</h6>
                         <br />
                     </div>
                     <button
-                        onClick={
-                          ()=> deleteHandeler(i)
-                        }
-                        className="bg-red-400 text-white px-4 py-2 rounded font-bold"
+                        onClick={() => deleteHandeler(i)}
+                        className="bg-cyan-600 text-white px-4 py-2 rounded font-bold"
                     >
                         Delete
                     </button>
                 </li>
+                
             );
         });
     }
 
     return (
         <>
-            <h1 className="bg-black text-white p-5 text-5xl font-bold text-center">
-                Abhay's To-DO List
-            </h1>
+            <h1 className=" p-5 text-5xl text-center">Abhay's To-Do List</h1>
             <form onSubmit={submitHandeler}>
                 <input
                     type="text"
-                    className="text-2xl border-zinc-800 border-4 m-8 px-4 py-2"
+                    className="text-2xl border-zinc-800 border-4 m-8 px-4 py-2 w-1/3"
                     placeholder="Enter your title here"
                     value={title}
                     onChange={(e) => {
@@ -63,7 +62,7 @@ const page = () => {
                 />
                 <input
                     type="text"
-                    className="text-2xl border-zinc-800 border-4 m-8 px-4 py-2"
+                    className="text-2xl border-zinc-800 border-4 m-8 px-4 py-2 w-1/3"
                     placeholder="Enter your description here"
                     value={desc}
                     onChange={(e) => {
@@ -75,6 +74,9 @@ const page = () => {
                 </button>
             </form>
             <hr />
+            {/* <h1 className="font-bold text-2xl text-center">
+                    No Task Available
+                </h1> */}
             <div className="p-8 bg-slate-200">
                 <ul>{renderTask}</ul>
             </div>
