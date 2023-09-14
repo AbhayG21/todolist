@@ -1,8 +1,8 @@
 "use client";
 
-//prevent default: when we click on submit button it will refresh the page and we dont want that so we use prevent default
-//useState: it is used to store the value of the input field
-//onChange: it is used to change the value of the input field
+/*prevent default: when we click on submit button it will refresh the page and we dont want that so we use prevent default
+useState: it is used to store the value of the input field
+onChange: it is used to change the value of the input field*/
 //value: it is used to get the value of the input field
 
 import React, { useState } from "react";
@@ -53,7 +53,7 @@ const page = () => {
             <form onSubmit={submitHandeler}>
                 <input
                     type="text"
-                    className="text-2xl border-zinc-800 border-4 m-8 px-4 py-2 w-1/3"
+                    className="text-3/2vw border-zinc-800 border-4 m-8 px-4 py-2 w-1/3"
                     placeholder="Enter your title here"
                     value={title}
                     onChange={(e) => {
@@ -62,14 +62,14 @@ const page = () => {
                 />
                 <input
                     type="text"
-                    className="text-2xl border-zinc-800 border-4 m-8 px-4 py-2 w-1/3"
+                    className="text-3/2vw border-zinc-800 border-4 m-8 px-4 py-2 w-1/3 "
                     placeholder="Enter your description here"
                     value={desc}
                     onChange={(e) => {
                         setdesc(e.target.value);
                     }}
                 />
-                <button className="bg-black text-white px-4 py-3 m-5 text-2xl font-bold rounded">
+                <button className="bg-black text-white px-4 py-3 m-5 text-3/2vw font-bold rounded">
                     Add Task
                 </button>
             </form>
